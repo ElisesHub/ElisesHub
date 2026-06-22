@@ -1,55 +1,77 @@
- # Hi! 👋
+# Hi! 👋
 
-I build **.NET / ASP.NET Core** applications with a focus on clean, layered architecture, REST APIs, authentication, Docker, and SQL / NoSQL databases.
+Bilingual (English / French) software engineer with 13+ years building production systems in C# and .NET — REST APIs, relational databases, and cloud services on Azure — currently broadening into Python and data engineering.
 
-## Featured project — Containerised Multi-Service Account System
+---
 
-An authenticated, containerised account-management application built as a multi-service (three-tier) system, organised with **Clean Architecture** (Domain / Application / Infrastructure / Presentation layers, dependencies pointing inward):
+## Featured projects
 
-- Razor Pages / MVC frontend
-- **Accounts Application API** — application-facing service handling request flow, validation, and coordination
-- **Accounts Database API** — dedicated data-access service, separated so it can be reused by other services without duplicating database logic
-- MySQL database
-- API-key-based service-to-service communication
-- Auth0 authentication on the frontend
-- Swagger / OpenAPI documentation, health checks, global exception handling, and startup configuration validation
+### 🔷 Containerised Multi-Service Account System *(C# / .NET)*
+
+An authenticated, containerised account-management application built as a multi-service system, organised with **Clean Architecture** (Domain / Application / Infrastructure / Presentation layers, dependencies pointing inward):
+
+- Razor Pages / MVC frontend, an **Accounts Application API**, and a dedicated **Accounts Database API** — the data-access service is separated so it can be reused by other APIs without duplicating database logic
+- API-key-based service-to-service communication; Auth0 authentication; Swagger / OpenAPI documentation
 - Full Docker Compose setup, with a separate production repository for **one-command deployment**
 
-See the pinned **Accounts System** repositories below.
+**Stack:** C#, ASP.NET Core, Razor Pages, MVC, MySQL, Docker, Auth0. Built with Clean Architecture and DDD tactical patterns (typed value objects with validation).
 
-## Tech stack
+See the pinned **Accounts System** repositories.
 
-C#, .NET, ASP.NET Core, Razor Pages, MVC, REST APIs, MySQL, Docker, Docker Compose, Auth0, Swagger/OpenAPI. Built with Clean Architecture and DDD tactical patterns (e.g. strongly-typed value objects with validation); actively deepening my Domain-Driven Design.
+### 🐍 Energy Readings API *(Python / FastAPI)*
+
+A FastAPI service for ingesting and querying hourly energy meter readings, built while broadening my stack into Python and data engineering:
+
+- Organised by feature (**vertical slice**) with **CQS** — command/query separation — at the folder level
+- REST endpoints for ingesting (single + bulk), querying, and daily aggregations
+- PostgreSQL with **SQLModel**, validated inputs via Pydantic, full **Docker Compose** setup
+
+**Stack:** Python, FastAPI, SQLModel, PostgreSQL, Docker.
+
+See the **energy-readings-api** repository.
+
+---
 
 ## Contact
 
-- 📫 LinkedIn: https://www.linkedin.com/in/elise-loi
+📫 [LinkedIn](https://www.linkedin.com/in/elise-loi)
 
 ---
 
 # Bonjour ! 👋
 
-Je développe des applications **.NET / ASP.NET Core**, en mettant l'accent sur une architecture clean et en couches, les API REST, l'authentification, Docker ainsi que les bases de données SQL et NoSQL.
+Développeuse logicielle bilingue (français / anglais) avec plus de 13 ans d'expérience à concevoir des systèmes en production en C# et .NET — API REST, bases de données relationnelles, services cloud sur Azure — j'élargis actuellement ma stack vers Python et la data engineering.
 
-## Projet phare — Système de gestion de comptes multi-services conteneurisé
+---
 
-Une application de gestion de comptes authentifiée et conteneurisée, conçue comme un système multi-services (trois niveaux) et organisée selon les principes de la **Clean Architecture** (couches Domain / Application / Infrastructure / Presentation, dépendances orientées vers l'intérieur) :
+## Projets phares
 
-- Une interface frontend développée avec Razor Pages / MVC
-- **Accounts Application API** — service applicatif gérant le flux des requêtes, la validation et la coordination
-- **Accounts Database API** — service d'accès aux données dédié, séparé afin de pouvoir être réutilisé par d'autres services sans dupliquer la logique d'accès à la base de données
-- Une base de données MySQL
-- Une communication interservices sécurisée par clé API
-- Une authentification Auth0 côté frontend
-- Documentation Swagger / OpenAPI, health checks, gestion globale des exceptions et validation de la configuration au démarrage
-- Un déploiement complet via Docker Compose, avec un dépôt de production distinct permettant un **déploiement en une seule commande**
+### 🔷 Système de gestion de comptes multi-services conteneurisé *(C# / .NET)*
 
-Consultez ci-dessous les dépôts épinglés du projet **Accounts System**.
+Une application de gestion de comptes authentifiée et conteneurisée, conçue comme un système multi-services et organisée selon les principes de la **Clean Architecture** (couches Domain / Application / Infrastructure / Presentation, dépendances orientées vers l'intérieur) :
 
-## Technologies utilisées
+- Un frontend Razor Pages / MVC, une **Accounts Application API**, et une **Accounts Database API** dédiée — le service d'accès aux données est isolé afin de pouvoir être réutilisé par d'autres API sans dupliquer la logique d'accès à la base
+- Communication interservices sécurisée par clé API ; authentification Auth0 ; documentation Swagger / OpenAPI
+- Déploiement complet via Docker Compose, avec un dépôt de production distinct permettant un **déploiement en une seule commande**
 
-C#, .NET, ASP.NET Core, Razor Pages, MVC, API REST, MySQL, Docker, Docker Compose, Auth0, Swagger/OpenAPI. Conçu selon la Clean Architecture et des patterns tactiques du DDD (par exemple des value objects fortement typés avec validation) ; j'approfondis actuellement le Domain-Driven Design.
+**Stack :** C#, ASP.NET Core, Razor Pages, MVC, MySQL, Docker, Auth0. Conçu selon la Clean Architecture et avec des patterns tactiques du DDD (value objects fortement typés avec validation).
+
+Voir les dépôts épinglés **Accounts System**.
+
+### 🐍 Energy Readings API *(Python / FastAPI)*
+
+Un service FastAPI pour l'ingestion et l'interrogation de relevés énergétiques horaires, construit en parallèle de l'élargissement de ma stack vers Python et la data engineering :
+
+- Organisé par feature (**vertical slice**), avec une séparation **CQS** — command/query separation — au niveau des dossiers
+- Endpoints REST pour l'ingestion (unitaire et en masse), l'interrogation, et les agrégations journalières
+- PostgreSQL avec **SQLModel**, validation des entrées via Pydantic, déploiement complet via **Docker Compose**
+
+**Stack :** Python, FastAPI, SQLModel, PostgreSQL, Docker.
+
+Voir le dépôt **energy-readings-api**.
+
+---
 
 ## Me contacter
 
-- 📫 LinkedIn : https://www.linkedin.com/in/elise-loi
+📫 [LinkedIn](https://www.linkedin.com/in/elise-loi)
