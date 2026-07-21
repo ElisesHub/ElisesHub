@@ -77,5 +77,11 @@ Voir le dépôt **energy-readings-api**.
 📫 [LinkedIn](https://www.linkedin.com/in/elise-loi)
 
 
-**"Every system we create today will one day become a legacy system if it is valuable enough to survive" — Martin Kleppmann, Designing Data-Intensive Applications**
+---
+
+> *"Every system we create today will one day become a legacy system if it is valuable enough to survive"*
+>
+> — **Martin Kleppmann**, *Designing Data-Intensive Applications*
+
+---
 
