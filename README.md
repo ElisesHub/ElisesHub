@@ -1,4 +1,4 @@
-# English
+# Hello - (English)
 
 Bilingual (English / French) software engineer with 13+ years building production systems in C# and .NET — REST APIs, relational & document databases, and cloud services on Azure.
 
@@ -38,7 +38,7 @@ See the **energy-readings-api** repository.
 
 ---
 
-# Français 
+# Bonjour (Français) 
 
 Développeuse logicielle bilingue (français / anglais) avec plus de 13 ans d'expérience à concevoir des systèmes en production en C# et .NET — API REST, bases de données relationnelles, services cloud sur Azure.
 
