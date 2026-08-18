@@ -30,8 +30,6 @@ A FastAPI service for ingesting and querying hourly energy meter readings, built
 
 See the **energy-readings-api** repository.
 
----
-
 ## Contact
 
 📫 [LinkedIn](https://www.linkedin.com/in/elise-loi)
@@ -70,7 +68,6 @@ Un service FastAPI pour l'ingestion et l'interrogation de relevés énergétique
 
 Voir le dépôt **energy-readings-api**.
 
----
 
 ## Me contacter
 
