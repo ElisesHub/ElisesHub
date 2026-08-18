@@ -1,4 +1,4 @@
-# Hello (English)
+# Hello! <sup>$\textsf{\color{gray}{(English)}}$</sup>
 
 Bilingual (English / French) software engineer with 13+ years building production systems in C# and .NET — REST APIs, relational & document databases, and cloud services on Azure.
 
@@ -28,15 +28,15 @@ A FastAPI service for ingesting and querying hourly energy meter readings, built
 
 **Stack:** Python, FastAPI, SQLModel, PostgreSQL, Docker.
 
-See the **energy-readings-api** repository.
+See the **energy-readings-api** repository. 
 
-## Contact
+### Contact
 
 📫 [LinkedIn](https://www.linkedin.com/in/elise-loi)
 
 ---
 
-# Bonjour (Français) 
+# Bonjour!   <sup>$\textsf{\color{gray}{(Français)}}$</sup>
 
 Développeuse logicielle bilingue (français / anglais) avec plus de 13 ans d'expérience à concevoir des systèmes en production en C# et .NET — API REST, bases de données relationnelles, services cloud sur Azure.
 
@@ -69,7 +69,7 @@ Un service FastAPI pour l'ingestion et l'interrogation de relevés énergétique
 Voir le dépôt **energy-readings-api**.
 
 
-## Me contacter
+### Me contacter
 
 📫 [LinkedIn](https://www.linkedin.com/in/elise-loi)
 
