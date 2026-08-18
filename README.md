@@ -1,4 +1,4 @@
-# Hello - (English)
+# Hello (English)
 
 Bilingual (English / French) software engineer with 13+ years building production systems in C# and .NET — REST APIs, relational & document databases, and cloud services on Azure.
 
