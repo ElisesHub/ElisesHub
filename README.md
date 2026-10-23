@@ -1,6 +1,6 @@
 # Hello! <sup>$\textsf{\color{gray}{(English)}}$</sup>
 
-Bilingual (English / French) software engineer with 13+ years building production systems in C# and .NET — REST APIs, relational & document databases, and cloud services on Azure.
+Bilingual (English / French) software engineer with 14+ years building production systems in C# and .NET — REST APIs, relational & document databases, and cloud services on Azure.
 
 
 
@@ -8,15 +8,16 @@ Bilingual (English / French) software engineer with 13+ years building productio
 
 ### 🔷 Containerised Multi-Service Account System *(C# / .NET)*
 
-An authenticated, containerised account-management application built as a multi-service system, organised with **Clean Architecture** (Domain / Application / Infrastructure / Presentation layers, dependencies pointing inward):
+A containerised account-management application in .NET 10, built as a multi-service system and organised with **Clean Architecture** (Domain / Application / Infrastructure / Presentation layers, dependencies pointing inward):
 
-- Razor Pages / MVC frontend, an **Accounts Application API**, and a dedicated **Accounts Database API** — the data-access service is separated so it can be reused by other APIs without duplicating database logic
-- API-key-based service-to-service communication; Auth0 authentication; Swagger / OpenAPI documentation
-- Full Docker Compose setup, with a separate production repository for **one-command deployment**
+- Razor Pages / MVC frontend → **Orchestration API** → **Data API** → MySQL — data access is isolated in its own service so other APIs can reuse it without duplicating database logic, and only that service holds database credentials
+- API-key authentication on every service-to-service call, with a separate key per hop; Swagger / OpenAPI; health checks; configuration validated at startup
+- Single repository with one-command start via **Docker Compose**; passwords and keys supplied as **Docker secrets** rather than environment variables
+- Unit tests with xUnit, Moq and FluentAssertions; integration tests against a disposable MySQL container with **Testcontainers**
 
-**Stack:** C#, ASP.NET Core, Razor Pages, MVC, MySQL, Docker, Auth0. Built with Clean Architecture and DDD tactical patterns (typed value objects with validation).
+**Stack:** C#, ASP.NET Core, Razor Pages, MVC, MySQL, Docker, xUnit, Testcontainers. Built with Clean Architecture and DDD tactical patterns (typed value objects with validation).
 
-See the pinned **Accounts System** repositories.
+See the **[accounts-system](https://github.com/ElisesHub/accounts-system)** repository.
 
 ### 🐍 Energy Readings API *(Python / FastAPI)*
 
@@ -28,7 +29,7 @@ A FastAPI service for ingesting and querying hourly energy meter readings, built
 
 **Stack:** Python, FastAPI, SQLModel, PostgreSQL, Docker.
 
-See the **energy-readings-api** repository. 
+See the **[energy-readings-api](https://github.com/ElisesHub/energy-readings-api)** repository.
 
 ### Contact
 
@@ -38,7 +39,7 @@ See the **energy-readings-api** repository.
 
 # Bonjour!   <sup>$\textsf{\color{gray}{(Français)}}$</sup>
 
-Développeuse logicielle bilingue (français / anglais) avec plus de 13 ans d'expérience à concevoir des systèmes en production en C# et .NET — API REST, bases de données relationnelles, services cloud sur Azure.
+Développeuse logicielle bilingue (français / anglais) avec plus de 14 ans d'expérience à concevoir des systèmes en production en C# et .NET — API REST, bases de données relationnelles, services cloud sur Azure.
 
 
 
@@ -46,15 +47,16 @@ Développeuse logicielle bilingue (français / anglais) avec plus de 13 ans d'ex
 
 ### 🔷 Système de gestion de comptes multi-services conteneurisé *(C# / .NET)*
 
-Une application de gestion de comptes authentifiée et conteneurisée, conçue comme un système multi-services et organisée selon les principes de la **Clean Architecture** (couches Domain / Application / Infrastructure / Presentation, dépendances orientées vers l'intérieur) :
+Une application de gestion de comptes conteneurisée en .NET 10, conçue comme un système multi-services et organisée selon les principes de la **Clean Architecture** (couches Domain / Application / Infrastructure / Presentation, dépendances orientées vers l'intérieur) :
 
-- Un frontend Razor Pages / MVC, une **Accounts Application API**, et une **Accounts Database API** dédiée — le service d'accès aux données est isolé afin de pouvoir être réutilisé par d'autres API sans dupliquer la logique d'accès à la base
-- Communication interservices sécurisée par clé API ; authentification Auth0 ; documentation Swagger / OpenAPI
-- Déploiement complet via Docker Compose, avec un dépôt de production distinct permettant un **déploiement en une seule commande**
+- Frontend Razor Pages / MVC → **API d’orchestration** → **API de données** → MySQL — l'accès aux données est isolé dans un service dédié, réutilisable par d'autres API sans dupliquer la logique d'accès à la base, et seul ce service détient les identifiants de connexion
+- Authentification par clé API à chaque appel entre services, avec une clé distincte par appel ; Swagger / OpenAPI ; health checks ; validation de la configuration au démarrage
+- Dépôt unique avec démarrage en une seule commande via **Docker Compose** ; mots de passe et clés fournis sous forme de **secrets Docker** plutôt que de variables d'environnement
+- Tests unitaires avec xUnit, Moq et FluentAssertions ; tests d'intégration sur un conteneur MySQL jetable avec **Testcontainers**
 
-**Stack :** C#, ASP.NET Core, Razor Pages, MVC, MySQL, Docker, Auth0. Conçu selon la Clean Architecture et avec des patterns tactiques du DDD (value objects fortement typés avec validation).
+**Stack :** C#, ASP.NET Core, Razor Pages, MVC, MySQL, Docker, xUnit, Testcontainers. Conçu selon la Clean Architecture et avec des patterns tactiques du DDD (value objects fortement typés avec validation).
 
-Voir les dépôts épinglés **Accounts System**.
+Voir le dépôt **[accounts-system](https://github.com/ElisesHub/accounts-system)**.
 
 ### 🐍 Energy Readings API *(Python / FastAPI)*
 
@@ -66,7 +68,7 @@ Un service FastAPI pour l'ingestion et l'interrogation de relevés énergétique
 
 **Stack :** Python, FastAPI, SQLModel, PostgreSQL, Docker.
 
-Voir le dépôt **energy-readings-api**.
+Voir le dépôt **[energy-readings-api](https://github.com/ElisesHub/energy-readings-api)**.
 
 
 ### Me contacter
@@ -81,4 +83,3 @@ Voir le dépôt **energy-readings-api**.
 > — **Martin Kleppmann**, *Designing Data-Intensive Applications*
 
 ---
-
