@@ -19,17 +19,18 @@ A containerised account-management application in .NET 10, built as a multi-serv
 
 See the **[accounts-system](https://github.com/ElisesHub/accounts-system)** repository.
 
-### 🐍 Energy Readings API *(Python / FastAPI)*
+### 🐍 Energy Readings *(Python / FastAPI · React / TypeScript)*
 
-A FastAPI service for ingesting and querying hourly energy meter readings, built while broadening my stack into Python and data engineering:
+A FastAPI service for ingesting and querying hourly energy meter readings, built while broadening my stack into Python and data engineering, with a React dashboard in progress:
 
 - Organised by feature (**vertical slice**) with **CQS** — command/query separation — at the folder level
 - REST endpoints for ingesting (single + bulk), querying, and daily aggregations
 - PostgreSQL with **SQLModel**, validated inputs via Pydantic, full **Docker Compose** setup
+- *In progress:* a **React / TypeScript** dashboard (Vite, React Router, TanStack Query) for browsing and charting the readings
 
-**Stack:** Python, FastAPI, SQLModel, PostgreSQL, Docker.
+**Stack:** Python, FastAPI, SQLModel, PostgreSQL, Docker · React, TypeScript, Vite, TanStack Query.
 
-See the **[energy-readings-api](https://github.com/ElisesHub/energy-readings-api)** repository.
+See the **[energy-readings-api](https://github.com/ElisesHub/energy-readings-api)** and **[energy-readings-web](https://github.com/ElisesHub/energy-readings-web)** repositories.
 
 ### Contact
 
@@ -58,17 +59,18 @@ Une application de gestion de comptes conteneurisée en .NET 10, conçue comme u
 
 Voir le dépôt **[accounts-system](https://github.com/ElisesHub/accounts-system)**.
 
-### 🐍 Energy Readings API *(Python / FastAPI)*
+### 🐍 Energy Readings *(Python / FastAPI · React / TypeScript)*
 
-Un service FastAPI pour l'ingestion et l'interrogation de relevés énergétiques horaires, construit en parallèle de l'élargissement de ma stack vers Python et la data engineering :
+Un service FastAPI pour l'ingestion et l'interrogation de relevés énergétiques horaires, construit en parallèle de l'élargissement de ma stack vers Python et la data engineering, avec un tableau de bord React en cours de développement :
 
 - Organisé par feature (**vertical slice**), avec une séparation **CQS** — command/query separation — au niveau des dossiers
 - Endpoints REST pour l'ingestion (unitaire et en masse), l'interrogation, et les agrégations journalières
 - PostgreSQL avec **SQLModel**, validation des entrées via Pydantic, déploiement complet via **Docker Compose**
+- *En cours :* un tableau de bord **React / TypeScript** (Vite, React Router, TanStack Query) pour parcourir et visualiser les relevés
 
-**Stack :** Python, FastAPI, SQLModel, PostgreSQL, Docker.
+**Stack :** Python, FastAPI, SQLModel, PostgreSQL, Docker · React, TypeScript, Vite, TanStack Query.
 
-Voir le dépôt **[energy-readings-api](https://github.com/ElisesHub/energy-readings-api)**.
+Voir les dépôts **[energy-readings-api](https://github.com/ElisesHub/energy-readings-api)** et **[energy-readings-web](https://github.com/ElisesHub/energy-readings-web)**.
 
 
 ### Me contacter
