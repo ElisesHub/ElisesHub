@@ -10,12 +10,20 @@ Bilingual (English / French) software engineer with 14+ years building productio
 
 A containerised account-management application in .NET 10, built as a multi-service system and organised with **Clean Architecture** (Domain / Application / Infrastructure / Presentation layers, dependencies pointing inward):
 
-- Razor Pages / MVC frontend → **Orchestration API** → **Data API** → MySQL — data access is isolated in its own service so other APIs can reuse it without duplicating database logic, and only that service holds database credentials
-- API-key authentication on every service-to-service call, with a separate key per hop; Swagger / OpenAPI; health checks; configuration validated at startup
-- Single repository with one-command start via **Docker Compose**; passwords and keys supplied as **Docker secrets** rather than environment variables
-- Unit tests with xUnit, Moq and FluentAssertions; integration tests against a disposable MySQL container with **Testcontainers**
+```mermaid
+flowchart LR
+    Web[Razor Pages / MVC] -->|REST| Orch[Orchestration API]
+    Orch -->|gRPC| Data[Data API]
+    Data --> DB[(PostgreSQL)]
+```
 
-**Stack:** C#, ASP.NET Core, Razor Pages, MVC, MySQL, Docker, xUnit, Testcontainers. Built with Clean Architecture and DDD tactical patterns (typed value objects with validation).
+- Razor Pages / MVC frontend → **Orchestration API** (REST) → **Data API** (gRPC) → PostgreSQL — data access is isolated in its own service so other APIs can reuse it without duplicating database logic, and only that service holds database credentials
+- **gRPC** between the APIs with a shared Protocol Buffers contract, deadlines and cancellation propagated down to the database query, and a **server-streaming** RPC that streams an account's transactions row by row without holding the full result in memory
+- API-key authentication on every service-to-service call, with a separate key per hop; Swagger / OpenAPI on the REST API; health checks; configuration validated at startup; the Data API connects as a least-privilege database role
+- Single repository with one-command start via **Docker Compose**; passwords and keys supplied as **Docker secrets** rather than environment variables
+- Unit tests with xUnit, NSubstitute and AwesomeAssertions; integration tests that call the gRPC services in memory against a disposable PostgreSQL container with **Testcontainers**
+
+**Stack:** C#, ASP.NET Core, Razor Pages, MVC, REST, gRPC, Protocol Buffers, PostgreSQL, Npgsql, Docker, xUnit, Testcontainers. Built with Clean Architecture and DDD tactical patterns (typed value objects with validation).
 
 See the **[accounts-system](https://github.com/ElisesHub/accounts-system)** repository.
 
@@ -50,12 +58,20 @@ Développeuse logicielle bilingue (français / anglais) avec plus de 14 ans d'ex
 
 Une application de gestion de comptes conteneurisée en .NET 10, conçue comme un système multi-services et organisée selon les principes de la **Clean Architecture** (couches Domain / Application / Infrastructure / Presentation, dépendances orientées vers l'intérieur) :
 
-- Frontend Razor Pages / MVC → **API d’orchestration** → **API de données** → MySQL — l'accès aux données est isolé dans un service dédié, réutilisable par d'autres API sans dupliquer la logique d'accès à la base, et seul ce service détient les identifiants de connexion
-- Authentification par clé API à chaque appel entre services, avec une clé distincte par appel ; Swagger / OpenAPI ; health checks ; validation de la configuration au démarrage
-- Dépôt unique avec démarrage en une seule commande via **Docker Compose** ; mots de passe et clés fournis sous forme de **secrets Docker** plutôt que de variables d'environnement
-- Tests unitaires avec xUnit, Moq et FluentAssertions ; tests d'intégration sur un conteneur MySQL jetable avec **Testcontainers**
+```mermaid
+flowchart LR
+    Web[Razor Pages / MVC] -->|REST| Orch[API d’orchestration]
+    Orch -->|gRPC| Data[API de données]
+    Data --> DB[(PostgreSQL)]
+```
 
-**Stack :** C#, ASP.NET Core, Razor Pages, MVC, MySQL, Docker, xUnit, Testcontainers. Conçu selon la Clean Architecture et avec des patterns tactiques du DDD (value objects fortement typés avec validation).
+- Frontend Razor Pages / MVC → **API d’orchestration** (REST) → **API de données** (gRPC) → PostgreSQL — l'accès aux données est isolé dans un service dédié, réutilisable par d'autres API sans dupliquer la logique d'accès à la base, et seul ce service détient les identifiants de connexion
+- **gRPC** entre les API avec un contrat Protocol Buffers partagé, des deadlines et une annulation propagées jusqu'à la requête en base, et un RPC en **streaming côté serveur** qui renvoie les transactions d'un compte ligne par ligne, sans charger le résultat complet en mémoire
+- Authentification par clé API à chaque appel entre services, avec une clé distincte par appel ; Swagger / OpenAPI sur l'API REST ; health checks ; validation de la configuration au démarrage ; l'API de données se connecte avec un rôle de base de données à privilèges minimaux
+- Dépôt unique avec démarrage en une seule commande via **Docker Compose** ; mots de passe et clés fournis sous forme de **secrets Docker** plutôt que de variables d'environnement
+- Tests unitaires avec xUnit, NSubstitute et AwesomeAssertions ; tests d'intégration qui appellent les services gRPC en mémoire, sur un conteneur PostgreSQL jetable avec **Testcontainers**
+
+**Stack :** C#, ASP.NET Core, Razor Pages, MVC, REST, gRPC, Protocol Buffers, PostgreSQL, Npgsql, Docker, xUnit, Testcontainers. Conçu selon la Clean Architecture et avec des patterns tactiques du DDD (value objects fortement typés avec validation).
 
 Voir le dépôt **[accounts-system](https://github.com/ElisesHub/accounts-system)**.
 
